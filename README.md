@@ -11,6 +11,7 @@
 
 # RN (Regras de negócio)
 -- Uma task deve ter:
+
   [ ] - `id` - Identificador único de cada task
 
   [ ] - `title` - Título da task
