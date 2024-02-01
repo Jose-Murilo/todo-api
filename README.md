@@ -10,7 +10,7 @@
   [ ] - Marcar pelo `id` uma task como completa
 
 # RN (Regras de negócio)
--- A task deve ter:
+-- Uma task deve ter:
   [ ] - `id` - Identificador único de cada task
 
   [ ] - `title` - Título da task
