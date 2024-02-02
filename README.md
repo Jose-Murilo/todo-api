@@ -1,4 +1,4 @@
-# RF (Regras funcionais)
+# RF (Requisitos funcionais)
   [ ] - Criação de uma task
 
   [ ] - Listagem de todas as tasks
@@ -24,7 +24,7 @@
 
   [ ] - `updated_at` - Deve ser sempre alterado para a data de quando a task foi atualizada.
 
-# RNF (Regras não funcionais) 
+# RNF (Requisitos não funcionais) 
   [ ] - Deve ser possível marcar a task como completa ou não. Isso significa que se a task estiver concluída, deve voltar ao seu estado “normal”.
 
   [ ] - Antes da alteração, deve ser feito uma validação se o `id` pertence a uma task salva no banco de dados.
