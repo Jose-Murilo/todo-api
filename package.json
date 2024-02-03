@@ -5,21 +5,26 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "knex": "node --import tsx ./node_modules/knex/bin/cli.js"
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.15",
+    "@types/supertest": "^6.0.2",
     "sqlite3": "^5.1.7",
+    "supertest": "^6.3.4",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
     "@fastify/cookie": "^9.3.1",
+    "dotenv": "^16.4.1",
     "fastify": "^4.26.0",
     "knex": "^3.1.0",
+    "vitest": "^1.2.2",
     "zod": "^3.22.4"
   }
 }
