@@ -23,7 +23,7 @@ describe('Tasks routes', async () => {
     execSync("npm run knex migrate:latest")
   })
 
-  it('should be albe to a ', () => {
+  it('should be albe to a list all tasks ', () => {
     
   })
 })
