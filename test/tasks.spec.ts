@@ -24,7 +24,7 @@ describe('Tasks routes', async () => {
   })
 
   it('should be albe to a list all tasks ', async () => {
-    const userCreated = await request(app.server)
+    await request(app.server)
       .post('/users')
       .send({
         user: 'Murilo',
