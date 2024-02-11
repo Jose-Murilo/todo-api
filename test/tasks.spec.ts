@@ -23,7 +23,13 @@ describe('Tasks routes', async () => {
     execSync("npm run knex migrate:latest")
   })
 
-  it('should be albe to a list all tasks ', () => {
-    
+  it('should be albe to a list all tasks ', async () => {
+    const userCreated = await request(app.server)
+      .post('/users')
+      .send({
+        user: 'Murilo',
+        email: 'murilotest@gmail.com'
+      })
+      .expect(201)
   })
 })
