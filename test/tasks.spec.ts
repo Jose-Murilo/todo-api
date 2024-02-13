@@ -24,12 +24,14 @@ describe('Tasks routes', async () => {
   })
 
   it('should be albe to a list all tasks ', async () => {
-    await request(app.server)
+    const user = await request(app.server)
       .post('/users')
       .send({
         user: 'Murilo',
         email: 'murilotest@gmail.com'
       })
       .expect(201)
+
+      console.log(user)
   })
 })
