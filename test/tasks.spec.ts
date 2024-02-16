@@ -11,17 +11,18 @@ import { app } from '../src/app'
 
 describe('Tasks routes', async () => {
   beforeAll(() => {
-    app.ready()  
+    app.ready()
   })
 
   afterAll(() => {
-    app.close()  
+    app.close()
   })
 
   beforeEach(() => {
-    execSync("npm run knex migrate:rollback --all")
-    execSync("npm run knex migrate:latest")
+    execSync('npm run knex migrate:rollback --all')
+    execSync('npm run knex migrate:latest')
   })
+
 
   it('should be albe to a list all tasks ', async () => {
     const user = await request(app.server)
@@ -32,6 +33,16 @@ describe('Tasks routes', async () => {
       })
       .expect(201)
 
-      console.log(user)
+      const userId = user.get('Set-Cookie')[0]
+
+      const createTask = await request(app.server)
+      .post('/tasks')
+      .send({
+        title: 'Murilo',
+        description: 'murilotest@gmail.com'
+      })
+      .expect(201)
+      
+      console.log(createTask)
   })
 })
